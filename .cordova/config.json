@@ -1,0 +1,9 @@
+{
+    "lib": {
+        "www": {
+            "id": "de.frupek.mapstest",
+            "version": "0.0.1",
+            "uri": "https://github.com/KajetanMischok/PhoneGapMapTest/archive/master.zip"
+        }
+    }
+}
