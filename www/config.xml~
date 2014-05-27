@@ -3,7 +3,8 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "de.frupek.mapstest"
+       	xmlns:android   = "http://schemas.android.com/apk/res/android"
+	id        = "de.frupek.mapstest"
         version   = "0.0.1">
 
     <name>PhoneGapMapTest</name>
@@ -51,6 +52,10 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.2.0" />
+    <gap:plugin name="org.apache.cordova.device-orientation" version="0.3.7" />
+    <gap:plugin name="org.apache.cordova.device-motion" version="0.2.8" />
+
 
     <!-- Define app icon for each platform. -->
     <icon src="res/icon/frupeksquare30_30-blue.png" />

@@ -52,6 +52,10 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+
 
     <!-- Define app icon for each platform. -->
     <icon src="res/icon/frupeksquare30_30-blue.png" />
