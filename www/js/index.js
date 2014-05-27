@@ -34,7 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 alert("devready");
-        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError, {enableHighAccuracy:true});
     },
 
 	onSuccess: function(position) {
