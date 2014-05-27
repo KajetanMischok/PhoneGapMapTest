@@ -27,13 +27,18 @@
         <title>Hello World</title>
     </head>
     <body>
-		<h1>Hello PhoneGap</h1>
-		<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<h1>Hello PhoneGap</h1>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <div id="geolocation" style="width: 640px; height: 1136px; border: 1px solid black">
-		</div>
+	</div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript">
+<<<<<<< HEAD
+	<script type="text/javascript">
+=======
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript">
+>>>>>>> a4a581cefe7529546b145078fb5d7e4ace20d12e
             app.initialize();
         </script>
     </body>
