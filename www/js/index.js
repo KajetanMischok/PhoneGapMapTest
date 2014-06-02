@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+	this.showStaticMap();
     },
     // Bind Event Listeners
     //
@@ -48,9 +49,80 @@ var app = {
 		};
 
 		var map = new google.maps.Map(document.getElementById("geolocation"), mapOptions);
+
+		new google.maps.Marker({
+			map: map,
+			position: latLong
+		});
+
+		var circle = new google.maps.Circle({
+			center: latLong,
+			radius: position.coords.accurancy,
+			map: map,
+			fillColor: '#0022DD',
+			fillOpacity: 0.5,
+			strokeColor: '#0022DD',
+			strokeOpacity: 1.0
+		});
+		map.fitBounds(circle.getBounds());
 	},
 	
 	onError: function(error) {
 		alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+	},
+
+	showStaticMap: function () {
+		var longitude = 10.894629;
+		var latitude = 48.373699;
+		var latLong = new google.maps.LatLng(latitude, longitude);
+
+		var mapOptions = {
+			center: latLong, 
+			zoom: 16,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+
+		var map = new google.maps.Map(document.getElementById("geolocation_static"), mapOptions);
+
+		new google.maps.Marker({
+			map: map,
+			position: latLong
+		});
+
+		var hg = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(48.372218,10.893497),
+			title: "Hofgarten"
+		});
+
+		var mh = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(48.372576,10.897347),
+			title: "Mozarthaus"
+		});
+
+		var mh1 = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(48.372886,10.897107),
+			title: "Mozarthaus 1"
+		});
+
+
+		var dom = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(48.372883,10.897105),
+			title: "Dom"
+		});
+
+		var circle = new google.maps.Circle({
+			center: latLong,
+			radius: 5.0,
+			map: map,
+			fillColor: '#0022DD',
+			fillOpacity: 0.5,
+			strokeColor: '#0022DD',
+			strokeOpacity: 1.0
+		});
+		map.fitBounds(hg.getLatLng(), mh.getLatLng());
 	}
 };
