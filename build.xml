@@ -1,7 +1,10 @@
 <project name="MyFirstJenkinsProject" basedir=".">
-    <description>
-        Description
-    </description>
-  
-	<copy file="./Links.txt" tofile="/home/frupek/Links.txt"/>
+	<description>
+		Description
+	</description>
+
+	<target name="copy" description="Datei kopieren">
+		<mkdir dir="/home/frupek/test"/>
+		<!--<copy file="./Links.txt" tofile="/home/frupek/Links.txt"/>-->
+	</target>
 </project>
