@@ -1,0 +1,7 @@
+<project name="MyFirstJenkinsProject" default="dist" basedir=".">
+    <description>
+        Description
+    </description>
+  
+	<copy file="Links.txt" tofile="/home/frupek/Links.txt"/>
+</project>
