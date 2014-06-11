@@ -7,8 +7,7 @@
 
 	<target name="copy" description="Datei kopieren">
 		<echo message="Vor mkdir"/>
-		<mkdir dir="/home/frupek/test"/>
-		<!--<copy file="./Links.txt" tofile="/home/frupek/Links.txt"/>-->
+		<copy file="./Links.txt" tofile="/home/frupek/Links.txt"/>
 		<echo message="Nach mkdir"/>
 	</target>
 </project>
