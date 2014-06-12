@@ -1,4 +1,4 @@
 PhoneGap Google Maps Tutorial
 http://www.devx.com/wireless/implement-google-maps-api-on-phonegap-using-the-device-api.html
 
-Das ist die Version von 11:13
+Das ist die Version von 11:19
